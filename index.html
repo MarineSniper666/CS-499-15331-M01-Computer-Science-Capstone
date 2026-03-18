@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CS 499 ePortfolio</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -12,6 +17,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       font-family: Arial, Helvetica, sans-serif;
       color: white;
     }
@@ -23,7 +29,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding-top: 16vh;
+      padding-top: 12vh;
       padding-left: 20px;
       padding-right: 20px;
       box-sizing: border-box;
@@ -39,7 +45,7 @@
 
     p {
       font-size: 22px;
-      opacity: 0.9;
+      opacity: 0.95;
       margin: 8px 0;
     }
 
@@ -50,34 +56,140 @@
     .badges img {
       margin: 4px;
       vertical-align: middle;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .about-box {
-      margin-top: 30px;
-      max-width: 850px;
+    .badges img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+    }
+
+    .nav-buttons {
+      margin-top: 18px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+      color: white;
+      border: 1px solid rgba(0, 255, 255, 0.45);
+      background: rgba(0, 0, 0, 0.45);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.25s ease;
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.15);
+    }
+
+    .nav-buttons a:hover {
+      color: #00ffff;
+      border-color: #00ffff;
+      box-shadow: 0 0 14px rgba(0, 255, 255, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .content-box {
+      margin-top: 28px;
+      width: 100%;
+      max-width: 900px;
       background: rgba(0, 0, 0, 0.55);
       border: 1px solid rgba(0, 255, 255, 0.35);
       border-radius: 12px;
       padding: 24px 28px;
       box-shadow: 0 0 14px rgba(0, 255, 255, 0.18);
+      box-sizing: border-box;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
-    .about-box h2 {
+    .content-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 18px rgba(0, 255, 255, 0.28);
+      border-color: rgba(0, 255, 255, 0.55);
+    }
+
+    .content-box h2 {
       margin-top: 0;
+      margin-bottom: 14px;
       color: #00ffff;
       text-shadow: 0 0 8px #00ffff;
+      font-size: 22px;
     }
 
-    .about-box p {
+    .content-box p,
+    .content-box li {
       font-size: 18px;
       line-height: 1.6;
-      opacity: 0.95;
+      opacity: 0.96;
+      text-align: left;
+    }
+
+    .content-box ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+      text-align: left;
+    }
+
+    .artifact-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 30px;
+      text-align: left;
+      margin-top: 8px;
+    }
+
+    .artifact-details div {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .artifact-details strong {
+      color: #00ffff;
+    }
+
+    footer {
+      margin-top: 36px;
+      margin-bottom: 24px;
+      padding: 14px 20px;
+      font-size: 15px;
+      opacity: 0.88;
+      text-align: center;
+      border-top: 1px solid rgba(0, 255, 255, 0.25);
+      width: 100%;
+      max-width: 900px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .content-box {
+        padding: 20px;
+      }
+
+      .content-box p,
+      .content-box li,
+      .artifact-details div {
+        font-size: 16px;
+      }
+
+      .artifact-details {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 
 <body>
-
   <div class="overlay">
 
     <h1>Computer Science ePortfolio</h1>
@@ -90,10 +202,16 @@
       <img src="https://img.shields.io/badge/INVENTORY_SYSTEM-C0392B?style=for-the-badge&logo=buffer&logoColor=white" alt="Inventory System">
     </div>
 
+    <div class="nav-buttons">
+      <a href="#about">About</a>
+      <a href="#artifact">Artifact</a>
+      <a href="#enhancements">Enhancements</a>
+    </div>
+
     <p>CS 499 Computer Science Capstone</p>
     <p>Software Development Portfolio</p>
 
-    <div class="about-box">
+    <div class="content-box" id="about">
       <h2>About This Portfolio</h2>
       <p>
         This ePortfolio showcases my work in the CS 499 Computer Science Capstone.
@@ -104,7 +222,31 @@
       </p>
     </div>
 
-  </div>
+    <div class="content-box" id="artifact">
+      <h2>Artifact Overview</h2>
+      <div class="artifact-details">
+        <div><strong>Artifact:</strong> Inventory Management Mobile Application</div>
+        <div><strong>Course:</strong> CS 360: Mobile Architecture and Programming</div>
+        <div><strong>Platform:</strong> Android</div>
+        <div><strong>Database:</strong> SQLite</div>
+        <div><strong>Primary Features:</strong> Inventory tracking, login system, SMS alerts</div>
+        <div><strong>Focus Areas:</strong> Software Design, Algorithms, Databases</div>
+      </div>
+    </div>
 
+    <div class="content-box" id="enhancements">
+      <h2>Planned Enhancements</h2>
+      <ul>
+        <li>Inventory analytics calculations for cost, value, and profitability review</li>
+        <li>Profit and loss monitoring with SMS alerts when items enter a loss condition</li>
+        <li>Inventory transaction tracking through a relational transaction history table</li>
+      </ul>
+    </div>
+
+    <footer>
+      Robert Lake | CS 499 Computer Science Capstone | GitHub Pages ePortfolio
+    </footer>
+
+  </div>
 </body>
 </html>
