@@ -2,61 +2,109 @@
 <html>
 
 <head>
-<title>CS 499 ePortfolio</title>
+  <title>CS 499 ePortfolio</title>
 
-<style>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url("computer.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
 
-body{
-    margin:0;
-    height:100vh;
+    .overlay {
+      background: rgba(0, 0, 0, 0.65);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 16vh;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
 
-    background-image:url("computer.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    font-family:Arial, Helvetica, sans-serif;
-    color:white;
-}
-
-/* dark overlay so text is readable */
-.overlay{
-    background:rgba(0,0,0,.55);
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items:center;
-    text-align:center;
-    padding-top:22vh;
-}
-
-h1{
-    font-size:60px;
-    text-shadow:
+    h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      text-shadow:
         0 0 8px #00ffff,
-        0 0 18px #00ffff,
-}
+        0 0 18px #00ffff;
+    }
 
-p{
-    font-size:22px;
-    opacity:.9;
-}
+    p {
+      font-size: 22px;
+      opacity: 0.9;
+      margin: 8px 0;
+    }
 
-</style>
+    .badges {
+      margin: 20px 0 25px 0;
+    }
+
+    .badges img {
+      margin: 4px;
+      vertical-align: middle;
+    }
+
+    .about-box {
+      margin-top: 30px;
+      max-width: 850px;
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(0, 255, 255, 0.35);
+      border-radius: 12px;
+      padding: 24px 28px;
+      box-shadow: 0 0 14px rgba(0, 255, 255, 0.18);
+    }
+
+    .about-box h2 {
+      margin-top: 0;
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="overlay">
+  <div class="overlay">
 
-<h1>Computer Science ePortfolio</h1>
+    <h1>Computer Science ePortfolio</h1>
 
-<p>CS 499 Computer Science Capstone</p>
+    <div class="badges">
+      <img src="https://img.shields.io/badge/ANDROID-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+      <img src="https://img.shields.io/badge/SQLITE-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+      <img src="https://img.shields.io/badge/SMS_API-F39C12?style=for-the-badge&logo=messagebird&logoColor=white" alt="SMS API">
+      <img src="https://img.shields.io/badge/CS_499-8E44AD?style=for-the-badge" alt="CS 499">
+      <img src="https://img.shields.io/badge/INVENTORY_SYSTEM-C0392B?style=for-the-badge&logo=buffer&logoColor=white" alt="Inventory System">
+    </div>
 
-<p>Software Development Portfolio</p>
+    <p>CS 499 Computer Science Capstone</p>
+    <p>Software Development Portfolio</p>
 
-</div>
+    <div class="about-box">
+      <h2>About This Portfolio</h2>
+      <p>
+        This ePortfolio showcases my work in the CS 499 Computer Science Capstone.
+        The primary artifact featured in this portfolio is an Inventory Management Mobile
+        Application developed in CS 360: Mobile Architecture and Programming. The project
+        demonstrates skills in software design and engineering, algorithms and data
+        structures, and database integration through planned enhancements and analysis.
+      </p>
+    </div>
+
+  </div>
 
 </body>
 </html>
