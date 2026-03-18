@@ -1,25 +1,11 @@
 # CS-499-15331-M01-Computer-Science-Capstone
-<div style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+<div style="margin-top: 20px; text-align: center;">
 
-  <span style="padding:8px 14px; border:1px solid #00ffff; color:#00ffff; border-radius:6px; box-shadow:0 0 8px #00ffff;">
-    ANDROID
-  </span>
-
-  <span style="padding:8px 14px; border:1px solid #00ffff; color:#00ffff; border-radius:6px; box-shadow:0 0 8px #00ffff;">
-    SQLITE
-  </span>
-
-  <span style="padding:8px 14px; border:1px solid #00ffff; color:#00ffff; border-radius:6px; box-shadow:0 0 8px #00ffff;">
-    SMS API
-  </span>
-
-  <span style="padding:8px 14px; border:1px solid #00ffff; color:#00ffff; border-radius:6px; box-shadow:0 0 8px #00ffff;">
-    CS 499
-  </span>
-
-  <span style="padding:8px 14px; border:1px solid #00ffff; color:#00ffff; border-radius:6px; box-shadow:0 0 8px #00ffff;">
-    INVENTORY SYSTEM
-  </span>
+  <img src="https://img.shields.io/badge/ANDROID-00ffff?style=for-the-badge&logo=android&logoColor=black">
+  <img src="https://img.shields.io/badge/SQLITE-00ffff?style=for-the-badge&logo=sqlite&logoColor=black">
+  <img src="https://img.shields.io/badge/SMS_API-00ffff?style=for-the-badge&logo=twilio&logoColor=black">
+  <img src="https://img.shields.io/badge/CS_499-00ffff?style=for-the-badge">
+  <img src="https://img.shields.io/badge/INVENTORY_SYSTEM-00ffff?style=for-the-badge">
 
 </div>
 Capstone
