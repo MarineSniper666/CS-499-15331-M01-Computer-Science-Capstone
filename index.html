@@ -315,6 +315,68 @@
     application, but also the ability to improve that application in response to real-world expectations.
   </p>
 </div>
+
+    <div class="content-box" id="algorithms">
+  <h2>Algorithms and Data Structures</h2>
+
+  <p>
+    This section focuses on how algorithmic logic and structured data handling were applied within the inventory management 
+    application. While the system does not rely on complex computational algorithms, it demonstrates practical algorithmic 
+    thinking through efficient data processing, validation, and real-time decision making.
+  </p>
+
+  <p>
+    One key area of improvement involved input validation and data consistency. Structured validation logic was implemented 
+    to ensure that all numeric values, such as quantity, cost, and weight, are properly formatted and within expected ranges 
+    before being committed to the database. This reduces the risk of corrupted or inconsistent data and ensures that all 
+    operations performed on the dataset remain reliable.
+  </p>
+
+  <p>
+    The application also incorporates conditional logic to support real-time system behavior. For example, inventory levels 
+    are evaluated during create and update operations, triggering SMS notifications when quantities fall below a defined 
+    threshold. This demonstrates the use of decision-based algorithms that respond dynamically to changing data conditions.
+  </p>
+
+  <p>
+    Additionally, the use of structured data within the application reflects an understanding of data organization and access. 
+    Inventory items are managed in a consistent format, allowing for predictable retrieval, updates, and display within the 
+    user interface. These design decisions improve overall efficiency and maintainability while ensuring that the application 
+    remains responsive and user-friendly.
+  </p>
+</div>
+
+   <div class="content-box" id="databases">
+  <h2>Database Design and Integration</h2>
+
+  <p>
+    The database serves as the foundation for persistent data storage, allowing users to maintain and manage 
+    inventory records across sessions.
+  </p>
+
+  <p>
+    The database schema was designed to store structured inventory data, including item name, quantity, location, case size, 
+    manufacturing cost, retail cost, and unit weight. This structured approach ensures consistency across all records and 
+    supports reliable data retrieval and updates.
+  </p>
+
+  <p>
+    Enhancements were made to improve data integrity and system reliability. Input validation was integrated with database 
+    operations to prevent invalid data from being stored, reducing the likelihood of errors during retrieval or processing. 
+    Additionally, delete operations were safeguarded with confirmation prompts, ensuring that data removal is intentional and controlled.
+  </p>
+
+  <p>
+    The interaction between the application and the database demonstrates an understanding of CRUD operations, including 
+    creating new records, reading existing data, updating entries, and safely deleting items. These operations are handled 
+    efficiently to maintain performance while ensuring that the user interface remains responsive.
+  </p>
+
+  <p>
+    Overall, the database design supports a stable and scalable system by ensuring data consistency, reliability, and 
+    efficient access. These improvements reflect the importance of well-structured data management in real-world applications.
+  </p>
+</div>
     
     <div class="content-box" id="codereview">
   <h2>Code Review</h2>
